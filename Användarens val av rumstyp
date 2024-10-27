@@ -1,0 +1,63 @@
+switch (choice)
+            {
+                case 1:
+                    if (!singleRoom.IsOccupied)
+                    {
+                        singleRoom.AssignGuest(guest);
+                        assigned = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Single Room är redan taget. Välj ett annat rum.");
+                    }
+                    break;
+                case 2:
+                    if (!doubleRoom.IsOccupied)
+                    {
+                        doubleRoom.AssignGuest(guest);
+                        assigned = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Double Room är taget. Välj ett annat rum.");
+                    }
+                    break;
+                case 3:
+                    if (!suite.IsOccupied)
+                    {
+                        suite.AssignGuest(guest);
+                        assigned = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Suite är redan taget. Välj ett annat rum.");
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Invalid choice. Please choose a valid room type.");
+                    break;
+            }
+        }
+    }
+}
+
+public class Room
+{
+    public int RoomNumber { get; set; }
+    public bool IsOccupied { get; set; }
+    public Guest Occupant { get; set; }
+
+    public virtual void AssignGuest(Guest guest)
+    {
+        if (!IsOccupied)
+        {
+            Occupant = guest;
+            IsOccupied = true;
+            Console.WriteLine($"Guest {guest.Name} har blivit tilldelad till rum {RoomNumber}.");
+        }
+        else
+        {
+            Console.WriteLine($"Room {RoomNumber} är redan upptaget.");
+        }
+    }
+}
