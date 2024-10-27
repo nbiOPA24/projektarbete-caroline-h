@@ -1,0 +1,12 @@
+static void AssignRoomToGuest(Guest guest, Room singleRoom, Room doubleRoom, Room suite)
+    {
+        bool assigned = false;
+        while (!assigned)
+        {
+            Console.WriteLine($"Tilldelar rum för {guest.Name}, {guest.Age}.");
+            Console.WriteLine("Välj en rumstyp:");
+            Console.WriteLine("1. Single Room");
+            Console.WriteLine("2. Double Room");
+            Console.WriteLine("3. Suite");
+            Console.Write("Skriv in nummer 1 för singel rum, 2 för dubbelrum, 3 för svit: ");
+            int choice = int.Parse(Console.ReadLine());
