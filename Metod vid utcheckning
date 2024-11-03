@@ -1,0 +1,6 @@
+   // Metod för att checka ut en gäst
+    static void CheckOutGuest(Room singleRoom, Room doubleRoom, Room suite)
+    {
+        HotelManager.CheckOutGuest(singleRoom, doubleRoom, suite);
+    }
+}
