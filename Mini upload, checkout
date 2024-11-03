@@ -1,0 +1,1 @@
+public DateTime CheckOutDate { get; set; }
