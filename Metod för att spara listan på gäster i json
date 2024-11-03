@@ -1,0 +1,13 @@
+private static void SaveToJsonFile()
+    {
+        try
+        {
+        string jsonString = JsonSerializer.Serialize(guests, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText("guest.json", jsonString);
+            Console.WriteLine("Gästinformation sparad i guest.json.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ett fel uppstod vid sparandet av filen: {ex.Message}");
+        }
+    }
