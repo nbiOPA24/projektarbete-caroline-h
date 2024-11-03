@@ -1,0 +1,3 @@
+ guests.Add(guest);
+        SaveToJsonFile();
+        Console.WriteLine("Gäst utcheckad och sparad i JSON-fil.");
