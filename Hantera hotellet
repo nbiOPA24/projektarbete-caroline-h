@@ -1,0 +1,3 @@
+public class HotelManager
+{
+    private static List<Guest> guests = new List<Guest>();
