@@ -1,6 +1,0 @@
-public class Room
-{
-    public int RoomNumber { get; set; } // Rumsnummer
-    public bool IsOccupied { get; set; } // Anger om rummet är upptaget
-    public Guest Occupant { get; set; } // Gäst som är tilldelad till rummet
-}
